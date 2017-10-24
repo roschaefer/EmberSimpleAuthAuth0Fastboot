@@ -17,6 +17,21 @@ module.exports = function(environment) {
         Date: false
       }
     },
+    'ember-simple-auth': {
+      authenticationRoute: 'login',
+      auth0: {
+        clientID: '3NSVbVwiVABkv6uS7vRzH0sY7mqmlzOG',
+        domain: 'rundfunk-testing.eu.auth0.com',
+        logoutReturnToURL: '/logout',
+      }
+    },
+    'contentSecurityPolicy':{
+      'font-src': "'self' data: https://*.auth0.com",
+      'style-src': "'self' 'unsafe-inline'",
+      'script-src': "'self' 'unsafe-eval' https://*.auth0.com",
+      'img-src': '*.gravatar.com *.wp.com data:',
+      'connect-src': "'self' http://localhost:* https://your-app-domain.auth0.com"
+    },
 
     APP: {
       // Here you can pass flags/options to your application instance
