@@ -1,0 +1,10 @@
+{{outlet}}
+<h1>Hello Ember-Simple-Auth-Auth0</h1>
+{{#if session.isAuthenticated}}
+  <div>
+    You are currently logged as: {{session.data.authenticated.profile.email}}
+  </div>
+  <a href="" {{ action "logout" }}>Logout</a>
+{{else}}
+  <a href="" {{ action "login" }}>Login</a>
+{{/if}}
