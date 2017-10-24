@@ -4,7 +4,7 @@
   <div>
     You are currently logged as: {{session.data.authenticated.profile.email}}
   </div>
-  <a href="" {{ action "logout" }}>Logout</a>
+  <button {{ action "logout" }}>Logout</button>
 {{else}}
-  <a href="" {{ action "login" }}>Login</a>
+  <button {{ action "login" }}>Login</button>
 {{/if}}
